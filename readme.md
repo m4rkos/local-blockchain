@@ -66,7 +66,7 @@ Use cases:
 ### 1. Clone
 
 ```bash
-git clone https://github.com/your-user/local-blockchain.git
+git clone https://github.com/m4rkos/local-blockchain.git
 cd local-blockchain
 dotnet restore
 dotnet run
