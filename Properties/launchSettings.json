@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LocalBlockchain": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
