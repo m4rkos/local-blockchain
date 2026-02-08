@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="LocalBlockchain.csproj" />
+  <Project Path="LocalBlockchain/LocalBlockchain.csproj" />
+  <Project Path="LocalBlockchain.Tests/LocalBlockchain.Tests.csproj" />
 </Solution>

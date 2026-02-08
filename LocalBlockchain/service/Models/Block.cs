@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json;
 using LocalBlockchain.Dto;
 
-namespace LocalBlockchain.Models
+namespace LocalBlockchain.service.Models
 {
     public class Block
     {
