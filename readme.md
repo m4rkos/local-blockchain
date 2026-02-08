@@ -1,5 +1,7 @@
 # LocalBlockchain
 
+![LocalBlockchain Banner](./docs/images/banner.png)
+
 A lightweight local blockchain built with **.NET** for educational and experimental purposes.  
 The goal is to simulate immutable transaction records, similar to a minimal digital ledger or "digital notary".
 
