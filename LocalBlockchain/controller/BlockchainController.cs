@@ -6,11 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace LocalBlockchain.controller
 {
     [Route("api/blockchain")]
-    public class BlockchainController(BlockchainService blockchainService) : ControllerBase
+    [ApiController]
+    public class BlockchainController(BlockchainService blockchainService) : Controller
     {
         private readonly BlockchainService _blockchainService = blockchainService;
 
-        [HttpGet("/")]
+        [HttpGet("")]
         public async Task<IActionResult> Health()
         {
             try
