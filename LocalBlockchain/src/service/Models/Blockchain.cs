@@ -1,7 +1,7 @@
-﻿using System.Text.Json;
-using LocalBlockchain.Dto;
+﻿using LocalBlockchain.src.database.models;
+using LocalBlockchain.src.dto;
 
-namespace LocalBlockchain.service.Models
+namespace LocalBlockchain.src.service.Models
 {
     public class Blockchain
     {

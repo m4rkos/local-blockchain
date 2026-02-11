@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace LocalBlockchain.service
+namespace LocalBlockchain.src.service
 {
     public class CryptoService
     {

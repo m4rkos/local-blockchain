@@ -1,4 +1,4 @@
-namespace LocalBlockchain.dto
+namespace LocalBlockchain.src.dto
 {
     public record KeyPairResponse(
         string PublicKey,

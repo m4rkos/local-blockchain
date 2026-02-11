@@ -1,5 +1,6 @@
-﻿using LocalBlockchain.Dto;
-using LocalBlockchain.service;
+﻿using LocalBlockchain.src.database.models;
+using LocalBlockchain.src.dto;
+using LocalBlockchain.src.service;
 
 namespace LocalBlockchain.Tests;
 

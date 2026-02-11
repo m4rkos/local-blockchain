@@ -1,9 +1,9 @@
-using LocalBlockchain.dto;
-using LocalBlockchain.Dto;
-using LocalBlockchain.service;
+using LocalBlockchain.src.database.models;
+using LocalBlockchain.src.dto;
+using LocalBlockchain.src.service;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LocalBlockchain.controller
+namespace LocalBlockchain.src.controller
 {
     [Route("api/blockchain")]
     [ApiController]
@@ -28,6 +28,13 @@ namespace LocalBlockchain.controller
         public async Task<ActionResult<List<BlockResponse>>> GetBlocks()
         {
             return _blockchainService.GetBlocks();
+        }
+
+        [HttpGet("db-blocks")]
+        public async Task<IActionResult> GetBlocksFromDB()
+        {
+            var blocks = _blockchainService.GetBlocksFromDB();
+            return Ok(blocks);
         }
 
         [HttpPost("add-transctionn")]

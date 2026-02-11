@@ -1,4 +1,4 @@
-namespace LocalBlockchain.Dto
+namespace LocalBlockchain.src.dto
 {
     public record BlockResponse(
         int Index, 

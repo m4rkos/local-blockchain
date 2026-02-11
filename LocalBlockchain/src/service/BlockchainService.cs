@@ -1,14 +1,16 @@
 
 using System.Text.Json;
-using LocalBlockchain.dto;
-using LocalBlockchain.Dto;
-using LocalBlockchain.service.Models;
+using LocalBlockchain.src.database.models;
+using LocalBlockchain.src.dto;
+using LocalBlockchain.src.repository;
+using LocalBlockchain.src.service.Models;
 
-namespace LocalBlockchain.service
+namespace LocalBlockchain.src.service
 {       
-    public class BlockchainService(Blockchain blockchain)
+    public class BlockchainService(Blockchain blockchain, BlockchainRepository blockchainRepository)
     {
         private readonly Blockchain _blockchain = blockchain;
+        private readonly BlockchainRepository _blockchainRepo = blockchainRepository;
 
         public bool BlockchainValid() => _blockchain.IsValid();
 
@@ -26,6 +28,12 @@ namespace LocalBlockchain.service
                     block.Timestamp
                 ));
             }
+            return result;
+        }
+
+        public async Task<List<BlockDB>> GetBlocksFromDB()
+        {
+            var result = await _blockchainRepo.GetBlocks();
             return result;
         }
 

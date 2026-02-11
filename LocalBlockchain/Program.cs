@@ -1,8 +1,12 @@
-﻿using LocalBlockchain.service;
-using LocalBlockchain.service.Models;
+﻿using LocalBlockchain.src.database;
+using LocalBlockchain.src.repository;
+using LocalBlockchain.src.service;
+using LocalBlockchain.src.service.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddSingleton<BlockchainRepository>();
 builder.Services.AddSingleton<BlockchainService>();
 builder.Services.AddSingleton<Blockchain>();
 
@@ -20,6 +24,10 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod();
     });
 });
+
+// SQLite Database
+builder.Services.AddDbContext<BlockchainDbContext>(options =>
+    options.UseSqlite("Data Source=blockchain.db"));
 
 var app = builder.Build();
 
